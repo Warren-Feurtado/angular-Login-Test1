@@ -1,0 +1,45 @@
+
+<div class="view">
+    <div class="formContainer">
+        <form [formGroup]="signUpForm" (ngSubmit)="onSignup()">
+            <div class="formHeader">
+                <h1>Sign Up</h1>
+            </div>
+            <div class="inptFlx">
+                <div class="inputContainer">
+                    <label for="fName">First Name</label>
+                    <br>
+                    <input type="text" id="fName" formControlName="fName" placeholder="Enter your First Name">
+                    <div class="errorMsg">{{fNameVal()}}</div>
+                </div>
+                <div class="inputContainer">
+                    <label for="lName">Last Name</label>
+                    <br>
+                    <input type="text" id="lName" formControlName="lName" placeholder="Enter your Last Name">
+                    <div class="errorMsg">{{lNameVal()}}</div>
+                </div>
+            </div>
+            <div class="inputContainer">
+                <label for="email">Email</label>
+                <br>
+                <input type="email" id="email" formControlName="email" placeholder="email@address.com">
+                <div class="errorMsg">{{EmailVal()}}</div>
+            </div>
+            <div class="inputContainer">
+                <label for="password">Password</label>
+                <br>
+                <input type="text" id="password" formControlName="password" placeholder="**********">
+                <div class="errorMsg"></div>
+            </div>
+            <div class="inputContainer">
+                <label for="passCon">Confirm Password</label>
+                <br>
+                <input type="text" id="passCon" formControlName="passCon" placeholder="**********">
+                <div class="errorMsg"></div>
+            </div>
+            <div class="subBtnContainer">
+                <button type="submit" class="subBtn" >Submit!</button>
+            </div>
+        </form>
+    </div>
+</div>
